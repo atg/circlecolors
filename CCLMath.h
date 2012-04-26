@@ -36,6 +36,14 @@ static Vec3 operator - (Vec3 v) {
     return Vec3(- v.x, - v.y, - v.z);
 }
 
+static Re clip01(Re x) {
+    if (x < 0.0)
+        return 0.0;
+    if (x > 1.0)
+        return 1.0;
+    return x;
+}
+
 
 static double fpropermod(Re a, Re n) {
     return a - n * floor(a / n);

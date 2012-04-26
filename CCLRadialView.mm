@@ -14,6 +14,9 @@
     
     return self;
 }
+- (void)awakeFromNib {
+    [self cycle];
+}
 
 - (void)drawRect:(NSRect)rect {
     
@@ -42,8 +45,8 @@
     
     uint32_t* data = new uint32_t[int(width * height)] ();
     
-    for (Re i = 0; i < width; i++) {
-        for (Re j = 0; j < height; j++) {
+    for (Re j = 0; j < height; j++) {
+        for (Re i = 0; i < width; i++) {
                         
             Re x = i / width;
             Re y = j / height;
@@ -60,15 +63,16 @@
             Re sat = (imag(z) + 1.0) / 2.0;
             Re light = (real(z) + 1.0) / 2.0;
             
-            Vec3 lch = Vec3(light * 100.0, sat * 100.0, -M_PI_2);
+            Vec3 lch = Vec3(light * 100.0, sat * 100.0, h);
             Vec3 lab = lch_to_lab(lch);
             Vec3 xyz = lab_to_xyz(lab);
             Vec3 lrgb = xyz_to_rgb(xyz);
             Vec3 rgb = lrgb_to_srgb(lrgb);
             
-            NSColor *rgbcolor = [[NSColor colorWithSRGBRed:rgb.x green:rgb.y blue:rgb.z alpha:1.0f] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-            CGFloat r,g,b,a;
-            [rgbcolor getRed:&r green:&g blue:&b alpha:&a];
+//            NSColor *rgbcolor = [[NSColor colorWithSRGBRed:rgb.x green:rgb.y blue:rgb.z alpha:1.0f] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+//            CGFloat r,g,b,a;
+//            [rgbcolor getRed:&r green:&g blue:&b alpha:&a];
+            CGFloat r = clip01(rgb.x), g = clip01(rgb.y), b = clip01(rgb.z);
             
             data[(int)(i + (j * width))] = (((int)(r * 255)) << 24) | (((int)(g * 255)) << 16) | (((int)(b * 255)) << 8) | 0xFF;            
         }
@@ -86,8 +90,13 @@
                                                                    bytesPerRow:width * 4
                                                                   bitsPerPixel:32];
     
+    [rep bitmapImageRepByRetaggingWithColorSpace:[NSColorSpace sRGBColorSpace]];
     [rep drawInRect:rect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0 respectFlipped:NO hints:nil];
     delete[] data;
 }
-
+- (void)cycle {
+    h += fmod(M_PI_4 / 16.0, M_2_PI);
+    [self setNeedsDisplay:YES];
+    [self performSelector:@selector(cycle) withObject:nil afterDelay:0.1];
+}
 @end

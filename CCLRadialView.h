@@ -10,8 +10,11 @@
 
 @interface CCLRadialView : NSView {
     NSColor* color;
+    CGFloat h;
 }
 
 @property (strong) NSColor* color;
+
+- (void)cycle;
 
 @end

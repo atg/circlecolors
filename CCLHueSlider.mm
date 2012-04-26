@@ -32,8 +32,8 @@
     
     uint32_t *data = new uint32_t[(int)(width * height)] ();
     
-    for (Re i = 0; i < width; i++) {
-        for (Re j = 0; j < height; j++) {
+    for (Re j = 0; j < height; j++) {
+        for (Re i = 0; i < width; i++) {
             
             Re x = i / width;
             Re y = j / height;
@@ -45,7 +45,7 @@
             if (d >= 1.0 || d <= -1.0)
                 continue;
             
-            if (d <= 1.0 - 2.5 * inner / width && d >= -1.0 + 2.5 * inner / width)
+            if (d <= 1.0 - 2.2 * inner / width && d >= -1.0 + 2.2 * inner / width)
                 continue;
             
             Cmplx z = Cmplx(x, y);
@@ -56,9 +56,7 @@
             Vec3 lrgb = xyz_to_rgb(xyz);
             Vec3 rgb = lrgb_to_srgb(lrgb);
             
-            NSColor *rgbcolor = [[NSColor colorWithSRGBRed:rgb.x green:rgb.y blue:rgb.z alpha:1.0f] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-            CGFloat r,g,b,a;
-            [rgbcolor getRed:&r green:&g blue:&b alpha:&a];
+            CGFloat r = clip01(rgb.x), g = clip01(rgb.y), b = clip01(rgb.z);
             
             data[(int)(i + (j * width))] = (((int)(r * 255)) << 24) | (((int)(g * 255)) << 16) | (((int)(b * 255)) << 8) | 0xFF;
         }
@@ -75,7 +73,7 @@
                                                                   bitmapFormat:NSAlphaFirstBitmapFormat
                                                                    bytesPerRow:width * 4
                                                                   bitsPerPixel:32];
-    
+    [rep bitmapImageRepByRetaggingWithColorSpace:[NSColorSpace sRGBColorSpace]];
     [rep drawInRect:rect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0 respectFlipped:NO hints:nil];
     delete[] data;
 }
