@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		753DDFB91548BEF200179460 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753DDFB81548BEF100179460 /* Cocoa.framework */; };
+		753DDFC31548BEF300179460 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 753DDFC11548BEF300179460 /* InfoPlist.strings */; };
+		753DDFC51548BEF300179460 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 753DDFC41548BEF300179460 /* main.m */; };
+		753DDFC91548BEF300179460 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 753DDFC71548BEF300179460 /* Credits.rtf */; };
+		753DDFCC1548BEF300179460 /* CCLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 753DDFCB1548BEF300179460 /* CCLAppDelegate.m */; };
+		753DDFCF1548BEF400179460 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 753DDFCD1548BEF400179460 /* MainMenu.xib */; };
+		753DDFD71548BF4D00179460 /* CCLRadialView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 753DDFD61548BF4D00179460 /* CCLRadialView.mm */; };
+		753DDFDB1548E50F00179460 /* CCLHueSlider.mm in Sources */ = {isa = PBXBuildFile; fileRef = 753DDFDA1548E50F00179460 /* CCLHueSlider.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		753DDFB41548BEF100179460 /* circlecolors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = circlecolors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		753DDFB81548BEF100179460 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		753DDFBB1548BEF200179460 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		753DDFBC1548BEF200179460 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		753DDFBD1548BEF200179460 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		753DDFC01548BEF300179460 /* circlecolors-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "circlecolors-Info.plist"; sourceTree = "<group>"; };
+		753DDFC21548BEF300179460 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		753DDFC41548BEF300179460 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		753DDFC61548BEF300179460 /* circlecolors-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "circlecolors-Prefix.pch"; sourceTree = "<group>"; };
+		753DDFC81548BEF300179460 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		753DDFCA1548BEF300179460 /* CCLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCLAppDelegate.h; sourceTree = "<group>"; };
+		753DDFCB1548BEF300179460 /* CCLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCLAppDelegate.m; sourceTree = "<group>"; };
+		753DDFCE1548BEF400179460 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		753DDFD51548BF4D00179460 /* CCLRadialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLRadialView.h; sourceTree = "<group>"; };
+		753DDFD61548BF4D00179460 /* CCLRadialView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCLRadialView.mm; sourceTree = "<group>"; };
+		753DDFD81548E4B900179460 /* CCLMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLMath.h; sourceTree = "<group>"; };
+		753DDFD91548E50F00179460 /* CCLHueSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLHueSlider.h; sourceTree = "<group>"; };
+		753DDFDA1548E50F00179460 /* CCLHueSlider.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCLHueSlider.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		753DDFB11548BEF100179460 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				753DDFB91548BEF200179460 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		753DDFA91548BEEC00179460 = {
+			isa = PBXGroup;
+			children = (
+				753DDFD81548E4B900179460 /* CCLMath.h */,
+				753DDFD51548BF4D00179460 /* CCLRadialView.h */,
+				753DDFD61548BF4D00179460 /* CCLRadialView.mm */,
+				753DDFD91548E50F00179460 /* CCLHueSlider.h */,
+				753DDFDA1548E50F00179460 /* CCLHueSlider.mm */,
+				753DDFBE1548BEF200179460 /* circlecolors */,
+				753DDFB71548BEF100179460 /* Frameworks */,
+				753DDFB51548BEF100179460 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		753DDFB51548BEF100179460 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				753DDFB41548BEF100179460 /* circlecolors.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		753DDFB71548BEF100179460 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				753DDFB81548BEF100179460 /* Cocoa.framework */,
+				753DDFBA1548BEF200179460 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		753DDFBA1548BEF200179460 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				753DDFBB1548BEF200179460 /* AppKit.framework */,
+				753DDFBC1548BEF200179460 /* CoreData.framework */,
+				753DDFBD1548BEF200179460 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		753DDFBE1548BEF200179460 /* circlecolors */ = {
+			isa = PBXGroup;
+			children = (
+				753DDFCA1548BEF300179460 /* CCLAppDelegate.h */,
+				753DDFCB1548BEF300179460 /* CCLAppDelegate.m */,
+				753DDFCD1548BEF400179460 /* MainMenu.xib */,
+				753DDFBF1548BEF300179460 /* Supporting Files */,
+			);
+			path = circlecolors;
+			sourceTree = "<group>";
+		};
+		753DDFBF1548BEF300179460 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				753DDFC01548BEF300179460 /* circlecolors-Info.plist */,
+				753DDFC11548BEF300179460 /* InfoPlist.strings */,
+				753DDFC41548BEF300179460 /* main.m */,
+				753DDFC61548BEF300179460 /* circlecolors-Prefix.pch */,
+				753DDFC71548BEF300179460 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		753DDFB31548BEF100179460 /* circlecolors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 753DDFD21548BEF400179460 /* Build configuration list for PBXNativeTarget "circlecolors" */;
+			buildPhases = (
+				753DDFB01548BEF100179460 /* Sources */,
+				753DDFB11548BEF100179460 /* Frameworks */,
+				753DDFB21548BEF100179460 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = circlecolors;
+			productName = circlecolors;
+			productReference = 753DDFB41548BEF100179460 /* circlecolors.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		753DDFAB1548BEEC00179460 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 753DDFAE1548BEEC00179460 /* Build configuration list for PBXProject "circlecolors" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 753DDFA91548BEEC00179460;
+			productRefGroup = 753DDFB51548BEF100179460 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				753DDFB31548BEF100179460 /* circlecolors */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		753DDFB21548BEF100179460 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				753DDFC31548BEF300179460 /* InfoPlist.strings in Resources */,
+				753DDFC91548BEF300179460 /* Credits.rtf in Resources */,
+				753DDFCF1548BEF400179460 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		753DDFB01548BEF100179460 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				753DDFC51548BEF300179460 /* main.m in Sources */,
+				753DDFCC1548BEF300179460 /* CCLAppDelegate.m in Sources */,
+				753DDFD71548BF4D00179460 /* CCLRadialView.mm in Sources */,
+				753DDFDB1548E50F00179460 /* CCLHueSlider.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		753DDFC11548BEF300179460 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				753DDFC21548BEF300179460 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		753DDFC71548BEF300179460 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				753DDFC81548BEF300179460 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		753DDFCD1548BEF400179460 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				753DDFCE1548BEF400179460 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		753DDFD01548BEF400179460 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		753DDFD11548BEF400179460 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		753DDFD31548BEF400179460 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "circlecolors/circlecolors-Prefix.pch";
+				INFOPLIST_FILE = "circlecolors/circlecolors-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		753DDFD41548BEF400179460 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "circlecolors/circlecolors-Prefix.pch";
+				INFOPLIST_FILE = "circlecolors/circlecolors-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		753DDFAE1548BEEC00179460 /* Build configuration list for PBXProject "circlecolors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				753DDFD01548BEF400179460 /* Debug */,
+				753DDFD11548BEF400179460 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		753DDFD21548BEF400179460 /* Build configuration list for PBXNativeTarget "circlecolors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				753DDFD31548BEF400179460 /* Debug */,
+				753DDFD41548BEF400179460 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 753DDFAB1548BEEC00179460 /* Project object */;
+}
